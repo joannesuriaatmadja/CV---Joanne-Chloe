@@ -1,0 +1,165 @@
+stylehome.css
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #4b351f, #2b1c10);
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.glitter {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle, rgba(255,215,120,0.8) 1px, transparent 2px),
+        radial-gradient(circle, rgba(212,175,55,0.6) 1px, transparent 2px);
+    background-size: 120px 120px, 200px 200px;
+    animation: glitterMove 18s linear infinite;
+    opacity: 0.35;
+    z-index: 0;
+}
+
+@keyframes glitterMove {
+    from { background-position: 0 0, 0 0; }
+    to { background-position: 600px 1200px, -800px 900px; }
+}
+
+
+header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
+}
+
+header h1 { color: #f5d27a; }
+nav a { color: #fff; text-decoration: none; margin-left: 20px; }
+nav a:hover { color: #f5d27a; }
+
+
+.hero {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    padding: 100px 120px;
+}
+
+
+.photo-frame {
+    padding: 12px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #d4af37, #fff2b2);
+    box-shadow: 0 0 40px rgba(212,175,55,0.6);
+}
+
+.photo-frame img {
+    width: 280px;
+    height: 360px;
+    border-radius: 22px;
+    object-fit: cover;
+}
+
+
+.hero-content {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    color: #fff6d6;
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    color: #f1e7d2;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.hero-content span {
+    color: #f5d27a;
+    font-weight: 600;
+}
+
+
+.btn {
+    margin-top: 28px;
+    display: inline-block;
+    padding: 14px 48px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #d4af37, #fff2b2);
+    color: #3b2a1a;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 28px rgba(212,175,55,0.8);
+    transition: 0.35s;
+}
+
+.btn:hover { transform: scale(1.08); }
+
+
+.profile-section,
+.quotes-section {
+    position: relative;
+    z-index: 2;
+    padding: 100px 120px;
+    text-align: center;
+}
+
+.profile-section h2,
+.quotes-section h2 {
+    color: #f5d27a;
+    font-size: 34px;
+    margin-bottom: 50px;
+}
+
+.profile-gallery,
+.quotes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-card,
+.quote-box {
+    border: 2px solid #d4af37;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 0 25px rgba(212,175,55,0.4);
+    transition: 0.4s;
+}
+
+.profile-card img {
+    width: 260px;
+    height: 360px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.quote-box {
+    max-width: 300px;
+    color: #f1e7d2;
+}
+
+.quote-box:hover,
+.profile-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 40px rgba(212,175,55,0.8);
+}
+
