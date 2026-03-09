@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>CV - Joanne Chloe</title>
+
+    <link rel="stylesheet" href="stylehome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="glitter"></div>
+
+<header>
+    <h1>CV - Joanne Chloe</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">Tentang</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="photo-frame">
+        <img src="joanne.jpg" alt="Foto Profil">
+    </div>
+
+    <div class="hero-content">
+        <h2>Halo, Saya Joanne Chloe</h2>
+
+        <p>
+            Saya seorang <span>Choreographer</span> dan <span>Dancer</span>
+            yang juga merupakan murid di Sekolah Santa Laurensia Suvarna Sutera.
+        </p>
+
+        <p>
+            Saya memiliki pengalaman dalam membuat aplikasi dan website sederhana, 
+            merancang tampilan yang mudah digunakan, serta mengolah dan 
+            menganalisis data untuk mendapatkan informasi yang berguna dan berdasarkan fakta.
+        </p>
+
+        <p>
+            Sebagai seorang pendidik, saya terbiasa menjelaskan materi dengan cara 
+            yang sederhana dan mudah dipahami, serta membimbing siswa 
+            dalam mengerjakan proyek berbasis praktik.
+        </p>
+
+        <a href="about.html" class="btn">Lihat Profil</a>
+    </div>
+</section>
+
+<section class="profile-section">
+    <h2>Profile Picture</h2>
+    <div class="profile-gallery">
+        <div class="profile-card"><img src="chloe.jpg"></div>
+        <div class="profile-card"><img src="chloe2.jpg"></div>
+        <div class="profile-card"><img src="chloe3.jpg"></div>
+    </div>
+</section>
+
+<section class="quotes-section">
+    <h1>Quotes Siswa</h1>
+    <div class="quotes-container">
+        <div class="quote-box">“To be a star you must burn”</div>
+        <div class="quote-box">“A negative mind will never give you a positive life”</div>
+        <div class="quote-box">“Just because it's hard doesn't mean it's impossible”</div>
+    </div>
+</section>
+
+
+<script>
+let lx = 0, ly = 0;
+document.addEventListener("mousemove", e => {
+    const dx = e.clientX - lx;
+    const dy = e.clientY - ly;
+    const a = Math.atan2(dy, dx) * 180 / Math.PI;
+
+    const t = document.createElement("div");
+    t.className = "trail-line";
+    t.style.left = e.clientX + "px";
+    t.style.top = e.clientY + "px";
+    t.style.transform = `rotate(${a}deg)`;
+    document.body.appendChild(t);
+    setTimeout(()=>t.remove(),600);
+
+    lx = e.clientX; ly = e.clientY;
+});
